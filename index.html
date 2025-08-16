@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ForEco Pvt Ltd - Leading plastic recycling company giving plastic a new life. Sustainable recycling solutions for a greener tomorrow."
+    />
+    <meta
+      name="keywords"
+      content="plastic recycling, sustainability, environmental, eco-friendly, waste management"
+    />
+    <title>ForEco Pvt Ltd - Giving Plastic a New Life</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "eco-primary": "#4CAF50",
+              "eco-secondary": "#3D9A4E",
+              "eco-light": "#CDE7CD",
+              "eco-neutral": "#F7F9F7",
+              "eco-dark": "#1E2D24",
+              "eco-highlight": "#FFD166",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      /* Design Tokens */
+      :root {
+        /* Colors */
+        --color-primary: #4caf50;
+        --color-secondary: #3d9a4e;
+        --color-light-accent: #cde7cd;
+        --color-neutral-bg: #f7f9f7;
+        --color-dark-text: #1e2d24;
+        --color-highlight: #ffd166;
+        --color-white: #ffffff;
+        --color-gray-light: #f3f4f6;
+        --color-gray-medium: #9ca3af;
+        --color-gray-dark: #374151;
+
+        /* Typography */
+        --font-family: "Inter", system-ui, sans-serif;
+        --font-weight-normal: 400;
+        --font-weight-semibold: 600;
+        --font-weight-bold: 700;
+        --letter-spacing-headings: 0.5px;
+        --line-height-body: 1.6;
+        --line-height-headings: 1.3;
+
+        /* Spacing */
+        --spacing-xs: 0.25rem;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+        --spacing-2xl: 3rem;
+
+        /* Border Radius */
+        --radius-sm: 0.375rem;
+        --radius-md: 0.5rem;
+        --radius-lg: 0.75rem;
+        --radius-xl: 1rem;
+
+        /* Navbar height */
+        --navbar-height: 80px; /* Adjust as needed */
+      }
+
+      * {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-normal);
+        line-height: var(--line-height-body);
+        color: var(--color-dark-text);
+      }
+
+      /* Headings */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-bold);
+        letter-spacing: var(--letter-spacing-headings);
+        line-height: var(--line-height-headings);
+        color: var(--color-dark-text);
+      }
+
+      .hero-gradient {
+        background: linear-gradient(
+          180deg,
+          var(--color-neutral-bg) 0%,
+          var(--color-light-accent) 100%
+        );
+        position: relative;
+        padding-top: var(--navbar-height);
+      }
+
+      .hero-gradient::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(
+            circle at 25% 25%,
+            rgba(30, 45, 36, 0.08) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 75% 75%,
+            rgba(76, 175, 80, 0.06) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(61, 154, 78, 0.04) 0%,
+            transparent 50%
+          ),
+          repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 2px,
+            rgba(76, 175, 80, 0.02) 2px,
+            rgba(76, 175, 80, 0.02) 4px
+          );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .hero-gradient::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            circle at 20% 80%,
+            rgba(76, 175, 80, 0.03) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(205, 231, 205, 0.05) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 40% 40%,
+            rgba(61, 154, 78, 0.02) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-form {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(76, 175, 80, 0.2);
+        border-radius: var(--radius-xl);
+        box-shadow: 0 8px 32px rgba(76, 175, 80, 0.1);
+      }
+
+      .hero-input {
+        border: 2px solid rgba(76, 175, 80, 0.2);
+        border-radius: var(--radius-md);
+        padding: 0.75rem 1rem;
+        font-family: var(--font-family);
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      .hero-input:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        background: rgba(255, 255, 255, 1);
+      }
+
+      .hero-input::placeholder {
+        color: var(--color-gray-medium);
+      }
+
+      .hero-submit {
+        background: linear-gradient(
+          135deg,
+          var(--color-primary) 0%,
+          var(--color-secondary) 100%
+        );
+        color: var(--color-white);
+        font-weight: var(--font-weight-semibold);
+        border-radius: var(--radius-md);
+        padding: 0.75rem 2rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: var(--font-family);
+        font-size: 1rem;
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+      }
+
+      .hero-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        background: linear-gradient(
+          135deg,
+          var(--color-secondary) 0%,
+          var(--color-primary) 100%
+        );
+      }
+
+      .hero-submit:active {
+        transform: translateY(0);
+      }
+
+      .hero-image {
+        max-width: 100%;
+        height: auto;
+        filter: drop-shadow(0 10px 30px rgba(76, 175, 80, 0.2));
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .counter {
+        font-weight: var(--font-weight-bold);
+        color: var(--color-secondary);
+      }
+
+      .service-card {
+        transition: all 0.3s ease;
+        background-color: var(--color-white);
+        border-radius: var(--radius-xl);
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-color: var(--color-primary);
+      }
+
+      .gallery-item {
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.02);
+      }
+
+      .gallery-overlay {
+        background: rgba(61, 154, 78, 0.8);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .modal {
+        display: none !important;
+        background: rgba(0, 0, 0, 0.9);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+
+      .modal.active {
+        display: flex !important;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .floating-label {
+        transition: all 0.3s ease;
+        color: var(--color-gray-medium);
+      }
+
+      .input-field:focus + .floating-label,
+      .input-field:not(:placeholder-shown) + .floating-label {
+        transform: translateY(-20px) scale(0.85);
+        color: var(--color-primary);
+      }
+
+      .input-field:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+      }
+
+      .filter-btn {
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+        font-weight: var(--font-weight-semibold);
+      }
+
+      .filter-btn.active {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+      }
+
+      .filter-btn:hover:not(.active) {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+      }
+
+      .hidden-gallery {
+        display: none;
+      }
+
+      /* Custom button styles */
+      .btn-primary {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        font-weight: var(--font-weight-semibold);
+        border-radius: var(--radius-lg);
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--color-secondary);
+      }
+
+      .btn-highlight {
+        background-color: var(--color-highlight);
+        color: var(--color-dark-text);
+        font-weight: var(--font-weight-semibold);
+        border-radius: var(--radius-lg);
+        transition: all 0.3s ease;
+      }
+
+      .btn-highlight:hover {
+        background-color: #f4c542;
+      }
+
+      /* Navigation styles */
+      .navbar {
+        position: fixed;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+        max-width: 1200px;
+        z-index: 50;
+        backdrop-filter: blur(10px);
+        background-color: rgba(144, 238, 144, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        transition: width 0.3s ease, background-color 0.3s ease;
+      }
+
+      .navbar.scrolled {
+        width: 75%;
+      }
+
+      /* Consistent section width */
+      .section-container {
+        width: 75%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      @media (max-width: 1024px) {
+        .navbar {
+          width: 85%;
+        }
+        .navbar.scrolled {
+          width: 85%;
+        }
+        .section-container {
+          width: 85%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --navbar-height: 120px;
+        }
+        .navbar {
+          width: 95%;
+        }
+        .navbar.scrolled {
+          width: 95%;
+        }
+        .section-container {
+          width: 95%;
+          padding: 0 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        :root {
+          --navbar-height: 140px;
+        }
+      }
+
+      .nav-link {
+        color: var(--color-dark-text);
+        font-weight: var(--font-weight-semibold);
+        transition: color 0.3s ease;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+      }
+
+      .nav-link:hover {
+        color: var(--color-primary);
+      }
+
+      .logo-text {
+        color: var(--color-dark-text);
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+        font-weight: var(--font-weight-bold);
+      }
+
+      /* Background variations */
+      .bg-neutral {
+        background-color: var(--color-neutral-bg);
+      }
+
+      .bg-light-accent {
+        background-color: var(--color-light-accent);
+      }
+
+      /* Text variations */
+      .text-primary {
+        color: var(--color-primary);
+      }
+
+      .text-secondary {
+        color: var(--color-secondary);
+      }
+
+      .text-dark {
+        color: var(--color-dark-text);
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-white">
+    <!-- Glassmorphism Navbar -->
+    <header class="navbar">
+      <div class="px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <div
+            class="w-10 h-10 bg-eco-primary rounded-lg flex items-center justify-center"
+          >
+            <i class="fas fa-recycle text-white text-xl"></i>
+          </div>
+          <span class="text-2xl font-bold logo-text">ForEco</span>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#hero" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#gallery" class="nav-link">Gallery</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <button class="md:hidden text-dark" id="mobile-menu-btn">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-white/20 backdrop-blur-md border-t border-white/30 rounded-b-lg"
+      >
+        <div class="px-6 py-4 space-y-3">
+          <a href="#hero" class="block nav-link">Home</a>
+          <a href="#about" class="block nav-link">About</a>
+          <a href="#services" class="block nav-link">Services</a>
+          <a href="#gallery" class="block nav-link">Gallery</a>
+          <a href="#contact" class="block nav-link">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="particles-js hero-gradient min-h-screen flex items-center relative overflow-hidden"
+    >
+      <div class="section-container hero-content">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Column: Content & Form -->
+          <div class="space-y-8">
+            <div class="space-y-6">
+              <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark leading-tight"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="100"
+              >
+                Turning Plastic Waste Into a
+                <span class="text-primary">Greener Tomorrow</span>
+              </h1>
+              <p
+                class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="300"
+              >
+                Start with your empty PET bottles. We recycle them and connect
+                you with your nearest kabadiwala.
+              </p>
+            </div>
+
+            <!-- Hero CTA Button -->
+            <div
+              class="space-y-4"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="500"
+            >
+              <a
+                href="#contact"
+                class="inline-block hero-submit px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                Recycle With Us
+              </a>
+              <p class="text-sm text-gray-500">
+                Join 50+ partners in sustainable recycling
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Illustration -->
+          <div
+            class="flex justify-center lg:justify-end"
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-delay="600"
+          >
+            <div class="relative">
+              <!-- Nature SVG from public folder -->
+              <img
+                src="public/Hero Illustration.png"
+                alt="Nature and sustainability illustration"
+                class="hero-image w-full max-w-lg h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <a
+          href="#about"
+          class="text-eco-primary hover:text-eco-dark transition-colors"
+        >
+          <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-neutral">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-in">
+            <h2
+              class="text-4xl font-bold text-dark mb-6"
+              data-aos="fade-right"
+              data-aos-duration="700"
+              data-aos-once="true"
+            >
+              Our Mission
+            </h2>
+            <div
+              class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-eco-primary"
+            >
+              <p class="text-gray-700 leading-relaxed mb-6">
+                At ForEco Pvt Ltd, we believe in transforming waste into
+                opportunity. Our cutting-edge recycling processes convert
+                discarded plastic into high-quality materials, reducing
+                environmental impact while creating economic value. We're
+                committed to building a circular economy where nothing goes to
+                waste.
+              </p>
+              <div class="grid grid-cols-2 gap-6 text-center">
+                <div>
+                  <div class="counter text-3xl font-bold" data-target="500">
+                    0
+                  </div>
+                  <div class="text-sm text-gray-600">Kg Recycled Daily</div>
+                </div>
+                <div>
+                  <div class="counter text-3xl font-bold" data-target="50+">
+                    +
+                  </div>
+                  <div class="text-sm text-gray-600">Partners</div>
+                </div>
+                <!-- <div>
+                                    <div class="counter text-3xl font-bold" data-target="5">0</div>
+                                    <div class="text-sm text-gray-600">Years Experience</div>
+                                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="fade-in space-y-4">
+            <div class="rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg"
+                alt="Plastic recycling facility"
+                class="w-full h-64 object-cover"
+                loading="lazy"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="200"
+              />
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="public/Recycle.jpg"
+                  alt="Recycling process"
+                  class="w-full h-32 object-cover"
+                  loading="lazy"
+                  data-aos="zoom-in"
+                  data-aos-duration="700"
+                  data-aos-delay="300"
+                />
+              </div>
+              <div class="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="public/TAW.jpg"
+                  alt="Team at work"
+                  class="w-full h-32 object-cover"
+                  loading="lazy"
+                  data-aos="zoom-in"
+                  data-aos-duration="700"
+                  data-aos-delay="400"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="section-container">
+        <div class="text-center mb-16 fade-in">
+          <h2
+            class="text-4xl font-bold text-dark mb-4"
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            Our Services
+          </h2>
+          <p class="text-xl text-gray-600">
+            Comprehensive plastic recycling solutions for every need
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:border-eco-primary fade-in"
+          >
+            <div
+              class="w-16 h-16 bg-light-accent rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-industry text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3">
+              Industrial Collection
+            </h3>
+            <p class="text-gray-600">
+              Large-scale plastic waste collection from manufacturing
+              facilities, ensuring efficient and scheduled pickup services.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:border-eco-primary fade-in"
+          >
+            <div
+              class="w-16 h-16 bg-light-accent rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-cogs text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3">
+              Advanced Processing
+            </h3>
+            <p class="text-gray-600">
+              State-of-the-art sorting, cleaning, and processing technology that
+              transforms waste plastic into premium recyclable materials.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:border-eco-primary fade-in"
+          >
+            <div
+              class="w-16 h-16 bg-light-accent rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-leaf text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3">
+              Eco-Friendly Products
+            </h3>
+            <p class="text-gray-600">
+              Manufacturing sustainable products from recycled materials,
+              creating valuable resources for various industries and
+              applications.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:border-eco-primary fade-in"
+          >
+            <div
+              class="w-16 h-16 bg-light-accent rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-handshake text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3">
+              Partnership Programs
+            </h3>
+            <p class="text-gray-600">
+              Collaborative sustainability partnerships with businesses, helping
+              them achieve zero-waste goals and environmental compliance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-neutral">
+      <div class="section-container">
+        <div class="text-center mb-16 fade-in">
+          <h2
+            class="text-4xl font-bold text-dark mb-4"
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            Our Work in Action
+          </h2>
+          <p class="text-xl text-gray-600 mb-8">
+            Explore our facilities, processes, and the dedicated team behind our
+            success
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <button
+              class="filter-btn active px-4 py-2 rounded-lg border transition-colors"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn px-4 py-2 rounded-lg border transition-colors"
+              data-filter="process"
+            >
+              Process
+            </button>
+            <button
+              class="filter-btn px-4 py-2 rounded-lg border transition-colors"
+              data-filter="products"
+            >
+              Products
+            </button>
+            <button
+              class="filter-btn px-4 py-2 rounded-lg border transition-colors"
+              data-filter="team"
+            >
+              Team
+            </button>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="gallery-item relative rounded-xl overflow-hidden shadow-lg fade-in"
+            data-category="process"
+          >
+            <img
+              src="https://images.pexels.com/photos/3735220/pexels-photo-3735220.jpeg"
+              alt="Sorting process"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+              data-aos="zoom-in"
+              data-aos-duration="700"
+              data-aos-delay="200"
+            />
+            <div
+              class="gallery-overlay absolute inset-0 flex items-center justify-center"
+            >
+              <div class="text-white text-center">
+                <h4 class="text-lg font-semibold mb-2">Sorting Process</h4>
+                <p class="text-sm">Advanced automated sorting technology</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="gallery-item relative rounded-xl overflow-hidden shadow-lg fade-in"
+            data-category="products"
+          >
+            <img
+              src="public/recycled produc.webp"
+              alt="Recycled products"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+              data-aos="zoom-in"
+              data-aos-duration="700"
+              data-aos-delay="300"
+            />
+            <div
+              class="gallery-overlay absolute inset-0 flex items-center justify-center"
+            >
+              <div class="text-white text-center">
+                <h4 class="text-lg font-semibold mb-2">Recycled Materials</h4>
+                <p class="text-sm">High-quality recycled plastic pellets</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="gallery-item relative rounded-xl overflow-hidden shadow-lg fade-in"
+            data-category="team"
+          >
+            <img
+              src="public/Team-factory.jpg"
+              alt="Team members"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+              data-aos="zoom-in"
+              data-aos-duration="700"
+              data-aos-delay="400"
+            />
+            <div
+              class="gallery-overlay absolute inset-0 flex items-center justify-center"
+            >
+              <div class="text-white text-center">
+                <h4 class="text-lg font-semibold mb-2">Our Team</h4>
+                <p class="text-sm">Dedicated professionals at work</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="gallery-item relative rounded-xl overflow-hidden shadow-lg fade-in"
+            data-category="process"
+          >
+            <img
+              src="public/TAW.jpg"
+              alt="Processing facility"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+              data-aos="zoom-in"
+              data-aos-duration="700"
+              data-aos-delay="500"
+            />
+            <div
+              class="gallery-overlay absolute inset-0 flex items-center justify-center"
+            >
+              <div class="text-white text-center">
+                <h4 class="text-lg font-semibold mb-2">Processing Facility</h4>
+                <p class="text-sm">Modern recycling equipment</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="gallery-item relative rounded-xl overflow-hidden shadow-lg fade-in"
+            data-category="products"
+          >
+            <img
+              src="public/final products.webp"
+              alt="Final products"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+              data-aos="zoom-in"
+              data-aos-duration="700"
+              data-aos-delay="600"
+            />
+            <div
+              class="gallery-overlay absolute inset-0 flex items-center justify-center"
+            >
+              <div class="text-white text-center">
+                <h4 class="text-lg font-semibold mb-2">Final Products</h4>
+                <p class="text-sm">Ready-to-use recycled materials</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="gallery-item relative rounded-xl overflow-hidden shadow-lg fade-in"
+            data-category="team"
+          >
+            <img
+              src="public/quality control.webp"
+              alt="Quality control"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+              data-aos="zoom-in"
+              data-aos-duration="700"
+              data-aos-delay="700"
+            />
+            <div
+              class="gallery-overlay absolute inset-0 flex items-center justify-center"
+            >
+              <div class="text-white text-center">
+                <h4 class="text-lg font-semibold mb-2">Quality Control</h4>
+                <p class="text-sm">Ensuring the highest standards</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Gallery -->
+    <div
+      id="gallery-modal"
+      class="modal fixed inset-0 flex items-center justify-center z-50"
+    >
+      <div class="relative max-w-4xl max-h-full p-4">
+        <img
+          id="modal-image"
+          src=""
+          alt=""
+          class="max-w-full max-h-full rounded-lg"
+        />
+        <button
+          id="close-modal"
+          class="absolute top-4 right-4 text-white text-2xl hover:text-gray-300"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-eco-primary relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-eco-primary to-eco-dark opacity-90"
+      ></div>
+      <div class="section-container relative z-10">
+        <div class="text-center fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Partner for a Sustainable Tomorrow
+          </h2>
+          <p class="text-xl text-eco-light mb-8">
+            Join us in creating a circular economy where waste becomes
+            opportunity
+          </p>
+          <a
+            href="#contact"
+            class="inline-block btn-highlight px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+          >
+            Connect Now
+          </a>
+        </div>
+      </div>
+      <div class="absolute top-10 right-10 opacity-10">
+        <i class="fas fa-recycle text-9xl"></i>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="section-container">
+        <div class="text-center mb-16 fade-in">
+          <h2
+            class="text-4xl font-bold text-dark mb-4"
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            Get in Touch
+          </h2>
+          <p class="text-xl text-gray-600">
+            Ready to start your sustainability journey? Let's talk!
+          </p>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-2 fade-in">
+            <form id="contact-form" class="space-y-6">
+              <iframe
+                data-tally-src="https://tally.so/embed/mKE6yg?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                loading="lazy"
+                width="100%"
+                height="694"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                title="Get in Touch
+"
+              ></iframe>
+              <script>
+                var d = document,
+                  w = "https://tally.so/widgets/embed.js",
+                  v = function () {
+                    "undefined" != typeof Tally
+                      ? Tally.loadEmbeds()
+                      : d
+                          .querySelectorAll("iframe[data-tally-src]:not([src])")
+                          .forEach(function (e) {
+                            e.src = e.dataset.tallySrc;
+                          });
+                  };
+                if ("undefined" != typeof Tally) v();
+                else if (d.querySelector('script[src="' + w + '"]') == null) {
+                  var s = d.createElement("script");
+                  (s.src = w),
+                    (s.onload = v),
+                    (s.onerror = v),
+                    d.body.appendChild(s);
+                }
+              </script>
+            </form>
+          </div>
+          <div class="fade-in">
+            <div class="bg-neutral rounded-xl p-8 space-y-6">
+              <div>
+                <h3 class="text-xl font-semibold text-dark mb-4">
+                  Contact Information
+                </h3>
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-3">
+                    <i class="fas fa-map-marker-alt text-primary"></i>
+                    <span class="text-gray-700">Hydrabad</span>
+                  </div>
+                  <div class="items-center space-x-3">
+                    <i class="fas fa-phone text-primary"></i>
+                    <span class="text-gray-700">+91 6304 936 970</span>
+                    <a href="https://wa.link/jr7g5z" target="_blank" rel="noopener" class="flex items-center space-x-2 text-green-600 hover:text-green-800 transition-colors ml-2">
+                        <i class="fab fa-whatsapp text-primary"></i>
+                        <span>Whatapp</span>
+                    </a>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <i class="fas fa-envelope text-primary"></i>
+                    <span class="text-gray-700">info@foreco.com</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <i class="fas fa-clock text-primary"></i>
+                    <span class="text-gray-700"
+                      >Mon-Fri: 8:00 AM - 6:00 PM</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="border-t border-gray-300 pt-6">
+                <h4 class="text-lg font-semibold text-dark mb-4">Find Us</h4>
+                <div class="rounded-lg h-48 flex items-center justify-center">
+                  <div class="text-center text-gray-600">
+                    <p class="text-sm">
+                      <iframe
+                        class="w-full h-full rounded-lg"
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3808.930067575686!2d78.4521495751634!3d17.318922983556636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDE5JzA4LjEiTiA3OMKwMjcnMTcuMCJF!5e0!3m2!1sen!2sin!4v1755349687992!5m2!1sen!2sin"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                      ></iframe>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 text-center text-sm text-gray-600 fade-in">
+          <p>
+            By submitting this form, you agree to our
+            <a href="#" class="text-primary hover:underline">Privacy Policy</a>
+            and consent to the collection and use of your information for
+            business purposes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="section-container">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div
+                class="w-10 h-10 bg-eco-primary rounded-lg flex items-center justify-center"
+              >
+                <i class="fas fa-recycle text-white text-xl"></i>
+              </div>
+              <span class="text-2xl font-bold">ForEco</span>
+            </div>
+            <p class="text-gray-400">
+              Transforming waste into sustainable solutions for a cleaner
+              future.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Services</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>Industrial Collection</li>
+              <li>Advanced Processing</li>
+              <li>Eco Products</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Company</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Sustainability</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-eco-primary rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-eco-primary rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-eco-primary rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 hover:bg-eco-primary rounded-lg flex items-center justify-center transition-colors"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; 2024 ForEco Pvt Ltd. All rights reserved. |
+            <a href="#" class="hover:text-primary transition-colors"
+              >Privacy Policy</a
+            >
+            |
+            <a href="#" class="hover:text-primary transition-colors"
+              >Terms of Service</a
+            >
+          </p>
+        </div>
+        <div class="mt-4 pt-4 text-center">
+          <p class="text-gray-500 text-sm">
+            Made with <i class="fas fa-heart text-red-500 mx-1"></i> by
+            <a
+              href="#"
+              target="_blank"
+              class="text-eco-primary hover:text-eco-secondary font-semibold transition-colors"
+            >
+              Aaditya
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS (Animate On Scroll)
+      AOS.init({
+        once: true,
+        easing: "ease-out-cubic",
+        duration: 700,
+        offset: 50,
+      });
+
+      // Glassmorphism Navbar Scroll Effect
+      const navbar = document.querySelector(".navbar");
+      let scrolled = false;
+
+      window.addEventListener("scroll", () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 100 && !scrolled) {
+          navbar.classList.add("scrolled");
+          scrolled = true;
+        } else if (scrollTop <= 100 && scrolled) {
+          navbar.classList.remove("scrolled");
+          scrolled = false;
+        }
+      });
+
+      // Smooth scrolling and fade-in animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Animated counters
+      function animateCounter(element, target) {
+        let current = 0;
+        const increment = target / 100;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          element.textContent = Math.floor(current).toLocaleString();
+        }, 20);
+      }
+
+      const counterElements = document.querySelectorAll(".counter");
+      const counterObserver = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !entry.target.dataset.animated) {
+            const target = parseInt(entry.target.dataset.target);
+            animateCounter(entry.target, target);
+            entry.target.dataset.animated = "true";
+          }
+        });
+      });
+
+      counterElements.forEach((el) => {
+        counterObserver.observe(el);
+      });
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Gallery filtering
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const galleryItems = document.querySelectorAll(".gallery-item");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+
+          // Update active button
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          // Filter items
+          galleryItems.forEach((item) => {
+            if (filter === "all" || item.dataset.category === filter) {
+              item.classList.remove("hidden-gallery");
+            } else {
+              item.classList.add("hidden-gallery");
+            }
+          });
+        });
+      });
+
+      // Gallery modal
+      const modal = document.getElementById("gallery-modal");
+      const modalImage = document.getElementById("modal-image");
+      const closeModal = document.getElementById("close-modal");
+
+      galleryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const img = item.querySelector("img");
+          modalImage.src = img.src;
+          modalImage.alt = img.alt;
+          modal.classList.add("active");
+        });
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.classList.remove("active");
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("active");
+        }
+      });
+
+      // Contact form handling
+      const contactForm = document.getElementById("contact-form");
+      const fileInput = document.getElementById("attachment");
+      const fileName = document.getElementById("file-name");
+      const formMessage = document.getElementById("form-message");
+
+      fileInput.addEventListener("change", (e) => {
+        if (e.target.files.length > 0) {
+          fileName.textContent = e.target.files[0].name;
+        } else {
+          fileName.textContent = "";
+        }
+      });
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Basic form validation
+        const formData = new FormData(contactForm);
+        let isValid = true;
+        let errors = [];
+
+        if (!formData.get("name").trim()) {
+          errors.push("Name is required");
+          isValid = false;
+        }
+
+        if (!formData.get("email").trim()) {
+          errors.push("Email is required");
+          isValid = false;
+        } else if (!isValidEmail(formData.get("email"))) {
+          errors.push("Please enter a valid email address");
+          isValid = false;
+        }
+
+        if (!formData.get("message").trim()) {
+          errors.push("Message is required");
+          isValid = false;
+        }
+
+        if (!isValid) {
+          formMessage.innerHTML =
+            '<div class="text-red-600 bg-red-100 p-3 rounded-lg">' +
+            errors.join("<br>") +
+            "</div>";
+          formMessage.classList.remove("hidden");
+          return;
+        }
+
+        // Simulate form submission
+        formMessage.innerHTML =
+          '<div class="text-green-600 bg-green-100 p-3 rounded-lg">Thank you for your message! We\'ll get back to you soon.</div>';
+        formMessage.classList.remove("hidden");
+        contactForm.reset();
+        fileName.textContent = "";
+      });
+
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+          // Close mobile menu if open
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
